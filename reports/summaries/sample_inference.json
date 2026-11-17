@@ -1,0 +1,30 @@
+{
+  "request": {
+    "customer_id": "CUST0003476",
+    "age": 48,
+    "annual_income": 34808.91,
+    "employment_type": "salaried",
+    "employment_years": 10.1,
+    "loan_amount": 21300.0,
+    "loan_term_months": 48,
+    "credit_score": 692.0,
+    "monthly_debt_payment": 686.46,
+    "credit_limit": 10270.0,
+    "revolving_balance": 2684.48,
+    "savings_balance": 20370.65,
+    "monthly_expenses": 2122.0,
+    "num_existing_loans": 1,
+    "num_late_payments": 0,
+    "repayment_history": null,
+    "home_ownership": "mortgage",
+    "default": 0.0
+  },
+  "response": {
+    "customer_id": "CUST0003476",
+    "default_probability": 0.009753,
+    "predicted_label": 0,
+    "risk_segment": "low",
+    "risk_label": "Low Risk",
+    "model_version": "random_forest-20261117T094018Z"
+  }
+}

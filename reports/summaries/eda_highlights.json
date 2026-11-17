@@ -1,0 +1,14 @@
+{
+  "n_rows": 9988,
+  "default_rate_pct": 13.74,
+  "top_target_correlations": {
+    "credit_score": -0.2726,
+    "num_late_payments": 0.216,
+    "has_late_payments": 0.1573,
+    "employment_stability_score": -0.1521,
+    "credit_utilization": 0.1305,
+    "employment_years": -0.1246,
+    "savings_runway_months": -0.1158,
+    "savings_ratio": -0.1152
+  }
+}

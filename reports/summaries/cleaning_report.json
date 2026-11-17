@@ -1,0 +1,12 @@
+{
+  "rows_in": 10050,
+  "rows_out": 9988,
+  "exact_duplicates_removed": 50,
+  "duplicate_ids_removed": 0,
+  "rows_dropped_invalid_target": 12,
+  "invalid_categories_nulled": {},
+  "out_of_range_nulled": {
+    "age": 18,
+    "savings_balance": 21
+  }
+}

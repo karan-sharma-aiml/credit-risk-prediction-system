@@ -1,0 +1,4 @@
+risk_segment,risk_label,n_customers,mean_probability,observed_default_rate,share
+low,Low Risk,1165,0.0477,0.0541,0.5831
+medium,Medium Risk,790,0.1516,0.243,0.3954
+high,High Risk,43,0.3727,0.4419,0.0215

@@ -1,0 +1,21 @@
+# Runtime dependencies for the ML layer + FastAPI backend (used by Docker, Render, Railway).
+# ML libraries are pinned EXACTLY to the versions the shipped model_bundle.joblib was
+# trained with: unpickling across scikit-learn / numpy versions is not guaranteed to work.
+numpy==2.5.4
+pandas==3.0.6
+scipy==1.18.1
+scikit-learn==1.9.1
+imbalanced-learn==0.14.2
+joblib==1.6.0
+xgboost==3.4.1
+lightgbm==4.7.0
+matplotlib==3.11.2
+
+# Backend
+fastapi==0.163.1
+starlette==1.10.0
+uvicorn[standard]==0.54.0
+pydantic==2.14.3
+pydantic-settings==2.16.3
+SQLAlchemy==2.1.8
+psycopg2-binary==2.9.13

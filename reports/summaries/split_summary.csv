@@ -1,0 +1,4 @@
+split,n_rows,n_default,n_repaid,default_rate
+train,5992,823,5169,0.1373
+validation,1998,275,1723,0.1376
+test,1998,274,1724,0.1371

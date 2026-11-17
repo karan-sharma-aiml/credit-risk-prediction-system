@@ -1,0 +1,67 @@
+# docker compose up --build        -> PostgreSQL + API (http://localhost:8000/docs) + dashboard (http://localhost:8501)
+# docker compose --profile seed run --rm seed   -> optional demo data (needs data/interim from `python -m ml.pipeline`)
+name: credit-risk
+
+x-api-env: &api-env
+  ENVIRONMENT: ${ENVIRONMENT:-production}
+  SECRET_KEY: ${SECRET_KEY:?Set SECRET_KEY in .env}
+  LOG_LEVEL: ${LOG_LEVEL:-INFO}
+  DATABASE_URL: postgresql://${POSTGRES_USER:?Set POSTGRES_USER in .env}:${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}@db:5432/${POSTGRES_DB:?Set POSTGRES_DB in .env}
+  MODEL_PATH: /app/saved_models/model_bundle.joblib
+  AUTO_CREATE_TABLES: "true"
+  CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:8501}
+  API_PORT: "8000"
+
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:?Set POSTGRES_USER in .env}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+      POSTGRES_DB: ${POSTGRES_DB:?Set POSTGRES_DB in .env}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+  api:
+    build: .
+    environment: *api-env
+    ports:
+      - "${API_PORT:-8000}:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+
+  dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile.dashboard
+    environment:
+      API_URL: http://api:8000
+    ports:
+      - "8501:8501"
+    depends_on:
+      api:
+        condition: service_healthy
+    restart: unless-stopped
+
+  seed:
+    build: .
+    profiles: ["seed"]
+    environment: *api-env
+    command: ["python", "-m", "backend.app.scripts.seed_demo", "--n", "300"]
+    volumes:
+      - ./data:/app/data:ro
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: "no"
+
+volumes:
+  pgdata:

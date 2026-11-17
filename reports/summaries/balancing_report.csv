@@ -1,0 +1,4 @@
+split,repaid_before,default_before,default_rate_before,repaid_after,default_after,default_rate_after
+train,5169,823,0.1373,5169,2584,0.3333
+validation,1723,275,0.1376,1723,275,0.1376
+test,1724,274,0.1371,1724,274,0.1371

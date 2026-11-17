@@ -1,0 +1,23 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+*.egg-info/
+.env
+
+# Data and artefacts are reproducible; keep folders, not files
+data/raw/*
+data/interim/*
+data/processed/*
+!data/*/.gitkeep
+saved_models/*
+!saved_models/.gitkeep
+# Champion artifacts are deployed with the app; track them (consider Git LFS if they grow)
+!saved_models/model_bundle.joblib
+!saved_models/model_metadata.json
+
+# Local databases and secrets
+*.db
+.env

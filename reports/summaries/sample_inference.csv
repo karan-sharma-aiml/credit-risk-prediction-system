@@ -1,0 +1,21 @@
+customer_id,default_probability,predicted_label,risk_segment,risk_label
+CUST0003476,0.009753,0,low,Low Risk
+CUST0000545,0.065358,0,low,Low Risk
+CUST0008235,0.372067,1,high,High Risk
+CUST0002969,0.095177,1,medium,Medium Risk
+CUST0004225,0.041316,0,low,Low Risk
+CUST0009422,0.27734,1,medium,Medium Risk
+CUST0000144,0.122929,1,medium,Medium Risk
+CUST0005471,0.040939,0,low,Low Risk
+CUST0007832,0.089343,1,medium,Medium Risk
+CUST0000788,0.147669,1,medium,Medium Risk
+CUST0002944,0.051907,0,low,Low Risk
+CUST0007941,0.036809,0,low,Low Risk
+CUST0002114,0.038161,0,low,Low Risk
+CUST0009471,0.018691,0,low,Low Risk
+CUST0006246,0.251767,1,medium,Medium Risk
+CUST0004594,0.027102,0,low,Low Risk
+CUST0009327,0.139607,1,medium,Medium Risk
+CUST0009359,0.067477,0,low,Low Risk
+CUST0001662,0.132424,1,medium,Medium Risk
+CUST0005069,0.219698,1,medium,Medium Risk

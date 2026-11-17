@@ -1,0 +1,104 @@
+{
+  "model_name": "random_forest",
+  "model_version": "random_forest-20261117T094018Z",
+  "decision_threshold": 0.08707215150548867,
+  "prior_correction": {
+    "train_prior": 0.33329033922352636,
+    "true_prior": 0.1373497997329773
+  },
+  "segment_settings": {
+    "low_max": 0.1,
+    "high_min": 0.3,
+    "codes": [
+      "low",
+      "medium",
+      "high"
+    ],
+    "labels": [
+      "Low Risk",
+      "Medium Risk",
+      "High Risk"
+    ]
+  },
+  "numeric_features": [
+    "age",
+    "annual_income",
+    "employment_years",
+    "loan_amount",
+    "loan_term_months",
+    "credit_score",
+    "monthly_debt_payment",
+    "credit_limit",
+    "revolving_balance",
+    "savings_balance",
+    "monthly_expenses",
+    "num_existing_loans",
+    "num_late_payments",
+    "debt_to_income",
+    "loan_to_income",
+    "loan_payment_to_income",
+    "expense_ratio",
+    "savings_ratio",
+    "savings_runway_months",
+    "credit_utilization",
+    "high_utilization_flag",
+    "employment_stability_score",
+    "has_late_payments"
+  ],
+  "categorical_features": [
+    "employment_type",
+    "repayment_history",
+    "home_ownership",
+    "age_group",
+    "income_bucket"
+  ],
+  "balanced_with_smote": true,
+  "tuned": false,
+  "best_params": {},
+  "dataset_version": "synthetic-v1",
+  "random_state": 42,
+  "train_rows": 5992,
+  "trained_at": "2026-11-17T09:40:18+00:00",
+  "metrics": {
+    "validation": {
+      "accuracy": 0.6561561561561562,
+      "precision": 0.2529976019184652,
+      "recall": 0.7672727272727272,
+      "f1": 0.38052299368800724,
+      "roc_auc": 0.7640774547565029,
+      "pr_auc": 0.36457661863078983,
+      "brier_score": 0.10746396752856191,
+      "mean_predicted_probability": 0.0964805773953986,
+      "observed_default_rate": 0.13763763763763764,
+      "confusion_matrix": {
+        "tn": 1100,
+        "fp": 623,
+        "fn": 64,
+        "tp": 211
+      }
+    },
+    "test": {
+      "accuracy": 0.6571571571571572,
+      "precision": 0.2533013205282113,
+      "recall": 0.7700729927007299,
+      "f1": 0.38121047877145436,
+      "roc_auc": 0.7651891713380866,
+      "pr_auc": 0.32888459504983664,
+      "brier_score": 0.10860273569614738,
+      "mean_predicted_probability": 0.0957509338540844,
+      "observed_default_rate": 0.13713713713713713,
+      "confusion_matrix": {
+        "tn": 1102,
+        "fp": 622,
+        "fn": 63,
+        "tp": 211
+      }
+    }
+  },
+  "library_versions": {
+    "python": "3.13.14",
+    "scikit_learn": "1.9.1",
+    "pandas": "3.0.6",
+    "numpy": "2.5.4"
+  }
+}

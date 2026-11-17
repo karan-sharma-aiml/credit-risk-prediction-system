@@ -1,0 +1,7 @@
+rank,model,selection_score,val_recall,val_f1,val_roc_auc,val_pr_auc
+1,random_forest,0.6503,0.7673,0.3805,0.7641,0.3646
+2,gradient_boosting,0.6216,0.7055,0.3767,0.7546,0.3758
+3,logistic_regression,0.6145,0.6873,0.3754,0.7565,0.3857
+4,lightgbm,0.6124,0.6836,0.3852,0.7444,0.3685
+5,xgboost,0.596,0.6291,0.3995,0.7482,0.3928
+6,decision_tree,0.5301,0.5418,0.3473,0.6971,0.2824

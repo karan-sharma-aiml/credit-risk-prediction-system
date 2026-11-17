@@ -1,0 +1,6 @@
+# Everything needed to develop and run the full test suite locally / in CI.
+-r requirements.txt
+-r requirements-dashboard.txt
+pytest==9.2.0
+httpx2==2.16.2
+pyflakes

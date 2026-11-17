@@ -1,0 +1,5 @@
+# Streamlit dashboard container: talks to the API over HTTP, no ML libraries needed.
+streamlit==1.67.0
+plotly==7.1.0
+pandas==3.0.6
+requests==2.34.2
